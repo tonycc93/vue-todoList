@@ -1,3 +1,4 @@
 // import './instance/index.js'
 // import './lifecycle'
-import './data_binding'
+// import './data_binding'
+import './computed'

@@ -6,21 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:client": "cross-env NODE_ENV=production webpack --config build/webpack.config.client.js",
-    "practice": "cross-env NODE_ENV=production webpack --config build/webpack.config.practice.js",
+    "practice": "cross-env webpack-dev-server --config build/webpack.config.practice.js",
     "build": "npm run clean && npm run build:client",
     "clean": "rimraf dist",
-    "lint": "eslint --ext .js --ext .jsx --ext .vue client/",
-    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue client/",
-    "precommit": "npm run lint-fix",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js"
   },
   "author": "jiangtao",
   "license": "ISC",
   "dependencies": {
     "babel-eslint": "^8.2.3",
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.3",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",

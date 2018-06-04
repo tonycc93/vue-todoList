@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
-const app = Vue({
+const app = new Vue({
+  el:'#root',
   template: '<div>{{text}}</div>',
   data: {
     text: 'text'
@@ -12,7 +13,7 @@ const app = Vue({
   }
 })
 
-app.$mount('#root')
+/* app.$mount('#root') */
 
 /*
 实例上的属性

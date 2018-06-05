@@ -6,4 +6,5 @@
 // import './component'
 // import './extend'
 // import './model/model'
-import './features'
+// import './features'
+import './render'

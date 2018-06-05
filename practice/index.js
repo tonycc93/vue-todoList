@@ -4,4 +4,5 @@
 // import './computed'
 // import './directive'
 //import './component'
-import './extend'
+// import './extend'
+import './model/model'

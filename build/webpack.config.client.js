@@ -14,7 +14,9 @@ const defaultPlugins = [
             MODE_ENV: isDev ? '"development"':'production'
         }
     }),
-    new HTMLPlugin()
+    new HTMLPlugin({
+      template:path.join(__dirname,'template.html')
+    })
 ]
 
 const devServer = {
@@ -100,7 +102,7 @@ if (isDev) {
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'runtime'
-            })  
+            })
         ])
     });
 }

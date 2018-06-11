@@ -8,6 +8,7 @@ import routes from "./routes";
 
 export default ()=>{
   return new Router({
-    routes
+    routes,
+    mode:'history'//history 地址后面没有hash值‘#’
   })
 }

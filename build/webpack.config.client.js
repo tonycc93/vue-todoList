@@ -25,6 +25,9 @@ const devServer = {
     overlay: {
         errors: true,
     }, //打印错误在浏览器
+    historyApiFallback:{
+      index:'/index.html'//打包生成的新路径，默认值为index.html，具体看打包设置的output的publicPath有没有给他加什么头,解决mode：history问题
+    },
     open: true, // 自动打开
     /* historyFallback:{
         //将不同的入口配置到这index.js

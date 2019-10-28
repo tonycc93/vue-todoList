@@ -1,19 +1,20 @@
 <template>
     <section class="real-app">
-        <input 
+        <input
             type="text"
             class="add-input"
             autofocus="autofocus"
             placeholder="接下来做什么！"
             v-on:keyup.enter="addTodo"
         >
-        <Item 
+        <Item
         :todo="todo"
         v-for="todo in filterTodos"
         :key="todo.id"
         @del="deleteTodo"
         />
         <Tabs :filter="filter" :todos="todos" @toggle="toggleTabs" @clearCompleted="clearCompleted"></Tabs>
+        <router-view></router-view>
     </section>
 </template>
 
@@ -78,11 +79,11 @@ export default {
     margin 0px
     width 100%
     font-size 24px
-    font-family  inherit 
+    font-family  inherit
     font-weight:inherit
     line-height 1.4rem
     border 0;
-    outline none 
+    outline none
     color inherit
     padding 6px
     border 1px solid #999
@@ -90,7 +91,7 @@ export default {
     box-sizing border-box
     font-smoothing:antialiased;
     padding 16px 16px 16px 60px
-    border none  
+    border none
 }
 
 </style>
